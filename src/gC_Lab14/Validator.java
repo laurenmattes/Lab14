@@ -1,3 +1,5 @@
+package gC_Lab14;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -34,7 +36,7 @@ public class Validator {
 			isValid = scnr.hasNextDouble();
 			if (!isValid) {
 				scnr.nextLine();
-				System.out.println("Enter a number, in digits.");
+				System.err.println("Enter a number, in digits.");
 			}
 		} while (!isValid);
 
@@ -49,6 +51,7 @@ public class Validator {
 	public static String getString(Scanner scnr, String prompt) {
 		// This approach uses exception handling.
 		System.out.print(prompt);
+
 		return scnr.nextLine();
 	}
 
